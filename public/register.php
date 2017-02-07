@@ -88,13 +88,13 @@
   <!-- TODO: HTML form goes here -->
   <form action="register.php" method="post">
 	First Name:<br>
-	<input type="text" name="first_name"><br>
+	<input type="text" name="first_name" value="<?php echo $first_name ?>" ><br>
 	Last Name:<br>
-	<input type="text" name="last_name"><br>
+	<input type="text" name="last_name" value="<?php echo $last_name ?>" ><br>
 	Email:<br>
-	<input type="text" name="email"><br>
+	<input type="text" name="email" value="<?php echo $email ?>" ><br>
 	Username:<br>
-	<input type="text" name="username"><br>
+	<input type="text" name="username" value="<?php echo $username ?>" ><br>
 	<input type="submit" name="submit" value="Submit">
   </form>
 
