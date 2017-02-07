@@ -47,7 +47,15 @@
 
   <!-- TODO: HTML form goes here -->
   <form action="register.php" method="post">
-	
+	First Name:<br>
+	<input type="text" name="first_name"><br>
+	Last Name:<br>
+	<input type="text" name="last_name"><br>
+	Email:<br>
+	<input type="text" name="email"><br>
+	Username:<br>
+	<input type="text" name="user_name"><br>
+	<input type="submit" value="Submit">
   </form>
 
 </div>
