@@ -38,7 +38,7 @@
 		$errors[] = "Email must be less than 255 characters.";
 	}
 	elseif (!has_valid_email_format($_POST['email'])){
-		$errors[] = "Email must contain '@'";
+		$errors[] = "Email must be a valid format";
 	}
 	if (is_blank($_POST['username'])) {
 		$errors[] = "Username cannot be blank.";
@@ -78,7 +78,7 @@
   <p>Register to become a Globitek Partner.</p>
 
   <?php
-    // TODO: display any form errors here
+    // display any form errors here
     // Hint: private/functions.php can help
 	if(!empty($errors)){
 		echo display_errors($errors);
