@@ -50,22 +50,24 @@
     // if there were no errors, submit data to database
 	if(empty($errors)){
       // Write SQL INSERT statement
-      // $sql = "";
+	  $date = date("Y-m-d H:i:s");
+      $sql = "INSERT INTO users (first_name, last_name, email, username, created_at) 
+			VALUES ('$first_name', '$last_name', '$email', '$username', '$date')";
 
       // For INSERT statments, $result is just true/false
-      // $result = db_query($db, $sql);
-      // if($result) {
-      //   db_close($db);
-
-      //   TODO redirect user to success page
-
-      // } else {
-      //   // The SQL INSERT statement failed.
-      //   // Just show the error, not the form
-      //   echo db_error($db);
-      //   db_close($db);
-      //   exit;
-      // }
+      $result = db_query($db, $sql);
+      if($result) {
+		db_close($db);
+		// redirect user to success page
+		redirect_to('registration_success.php');
+      } 
+	  else {
+		// The SQL INSERT statement failed.
+		// Just show the error, not the form
+		echo db_error($db);
+		db_close($db);
+        exit;
+	  }
 	}
   }
 ?>
